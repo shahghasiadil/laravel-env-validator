@@ -1,0 +1,31 @@
+{
+    "name": "shahghasi-adil/laravel-env-validator",
+    "description": "A Laravel package to validate environments variables configuration values.",
+    "keywords": ["laravel", "env", "validator","laravel-env-validator"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Shahghasi Adil",
+            "email": "adil.shahghasi@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.3|^8.0",
+        "illuminate/support":"^8.82|^9.0|^10.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "LaravelEnvValidator\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LaravelEnvValidator\\LaravelEnvValidatorServiceProvider"
+            ]
+        }
+    }
+}
