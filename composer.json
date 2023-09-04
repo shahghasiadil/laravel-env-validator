@@ -1,6 +1,6 @@
 {
     "name": "shahghasi-adil/laravel-env-validator",
-    "description": "A Laravel package to validate environments variables configuration values.",
+    "description": "A Laravel package to validate environments variables configuration values and generate environments variables rules.",
     "keywords": ["laravel", "env", "validator","laravel-env-validator"],
     "license": "MIT",
     "authors": [
