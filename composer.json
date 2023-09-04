@@ -9,16 +9,28 @@
             "email": "adil.shahghasi@gmail.com"
         }
     ],
+    "support": {
+        "issues": "https://github.com/shahghasiadil/laravel-env-validator/issues",
+        "source": "https://github.com/shahghasiadil/laravel-env-validator"
+    },
     "require": {
         "php": "^7.3|^8.0",
         "illuminate/support":"^8.82|^9.0|^10.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "^9.3"
+        "phpunit/phpunit": "^9.3",
+        "mockery/mockery": "^1.6",
+        "orchestra/testbench": "^8.10",
+        "laravel/pint": "^1.12"
     },
     "autoload": {
         "psr-4": {
             "LaravelEnvValidator\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "LaravelEnvValidator\\Tests\\": "tests/"
         }
     },
     "extra": {
@@ -27,5 +39,8 @@
                 "LaravelEnvValidator\\LaravelEnvValidatorServiceProvider"
             ]
         }
+    },
+    "scripts": {
+        "test": "phpunit"
     }
 }
