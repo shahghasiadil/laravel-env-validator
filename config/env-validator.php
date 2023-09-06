@@ -7,7 +7,6 @@ return [
         'APP_KEY' => 'required|string',
         'APP_DEBUG' => 'boolean',
         'APP_URL' => 'required|url',
-
         'DB_CONNECTION' => 'required',
         'DB_HOST' => 'required',
         'DB_PORT' => 'required',
@@ -17,8 +16,8 @@ return [
 
         'MAIL_HOST' => 'required',
         'MAIL_PORT' => 'required',
-        'MAIL_USERNAME' => 'required',
-        'MAIL_PASSWORD' => 'required',
+        'MAIL_USERNAME' => 'nullable',
+        'MAIL_PASSWORD' => 'nullable',
         'MAIL_ENCRYPTION' => 'nullable',
         'MAIL_FROM_ADDRESS' => 'required|email',
         'MAIL_FROM_NAME' => 'required',
