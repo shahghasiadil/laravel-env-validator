@@ -25,6 +25,7 @@ class EnvValidatorService implements ValidatorContract
 
         $dataToValidate = $this->getConfigData($configKeys);
         $validator = $this->makeValidator($dataToValidate, $rules);
+        $validator->setAttributeNames(array_combine($configKeys, $configKeys));
 
         if ($validator->fails()) {
             throw new EnvValidationException($validator->errors()->first());
