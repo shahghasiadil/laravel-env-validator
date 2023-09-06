@@ -44,13 +44,17 @@ The `laravel-env-validator` package provides a way to validate your `.env` confi
    protected $middlewareAliases = [
        'ensureValidEnv' => \LaravelEnvValidator\Middlewares\EnsureValidEnv::class,
    ];
+   ```
 
+   Add this to your `app/Http/Kernel.php`.
+
+   ```
     Route::middleware('ensureValidEnv')->group(function () {
         // ... code
     });
    ```
 
-   Add this to your `app/Http/Kernel.php`.
+   Add middleware to your `routes/web.php`
 
 4. **Customize Validation Rules**:
 
