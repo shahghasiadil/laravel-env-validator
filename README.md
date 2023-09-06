@@ -41,10 +41,13 @@ The `laravel-env-validator` package provides a way to validate your `.env` confi
    Ensure your environment is valid on every request by adding the middleware:
 
    ```php
-   protected $middleware = [
-       // other middlewares...
-       \LaravelEnvValidator\Middlewares\EnsureValidEnv::class,
+   protected $middlewareAliases = [
+       'ensureValidEnv' => \LaravelEnvValidator\Middlewares\EnsureValidEnv::class,
    ];
+
+    Route::middleware('ensureValidEnv')->group(function () {
+        // ... code
+    });
    ```
 
    Add this to your `app/Http/Kernel.php`.
@@ -61,10 +64,10 @@ All configuration for this package is stored in the `env-validator.php` config f
 
 For a detailed changelog, see the [CHANGELOG](CHANGELOG.md).
 
-## Testing
+## Configs
 
-Run the tests with:
+If env changes aren't working please run the following command:
 
 ```bash
-composer test
+php artisan config:clear
 ```
